@@ -44,7 +44,7 @@ class LoginPage extends Component {
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" autocomplete="off" className="active" id="password" value={this.state.pw} name="pw" onChange={this.handleChange} />
+              <input type="password" autocomplete="off" className="active" id="password" value={this.state.pw} name="pw" onChange={this.handleChange} />
               <label htmlFor="password">Password</label>
 
             </div>

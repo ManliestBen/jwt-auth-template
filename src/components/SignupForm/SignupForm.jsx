@@ -54,13 +54,13 @@ class SignupForm extends Component {
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" autocomplete="off" className="active" id="password" value={this.state.password} name="password" onChange={this.handleChange} />
+              <input type="password" autocomplete="off" className="active" id="password" value={this.state.password} name="password" onChange={this.handleChange} />
               <label htmlFor="password">Password</label>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" autocomplete="off" className="active" id="confirm" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
+              <input type="password" autocomplete="off" className="active" id="confirm" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
               <label htmlFor="confirm">Confirm Password</label>
             </div>
           </div>
