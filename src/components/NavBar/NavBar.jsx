@@ -1,33 +1,25 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = ({ user, handleLogout }) => {
-    let nav = user ?
-    <>
-        <nav>
-            <div className="nav-wrapper">
-                <ul id="nav-mobile" className="right">
-                    <li><a href=" " className="nav-link">Welcome, {user.name}</a></li>
-                    <li><a href=" " className="nav-link" onClick={handleLogout}>Log Out</a></li>
-                </ul>
-            </div>
-        </nav>
-    </>
-    :
-    <>
-        <nav>
-            <div className="nav-wrapper">
-                <ul id="nav-mobile" className="right">
-                    <li><a href="/login" className="nav-link">Log In</a></li>
-                    <li><a href="/signup" className="nav-link">Sign Up</a></li>
-                </ul>
-            </div>
-        </nav>
-    </>
-
     return (
-    <>
-        {nav}
-    </>
+        <nav>
+            <div className="nav-wrapper">
+                <Link to="/"><h4>JWT Auth Template</h4></Link>
+                {user ?
+                    <ul id="nav-mobile" className="right">
+                        <li><Link to=" " className="nav-link">Welcome, {user.name}</Link></li>
+                        <li><Link to=" " className="nav-link" onClick={handleLogout}>Log Out</Link></li>
+                    </ul>
+                    :
+                    <ul id="nav-mobile" className="right">
+                        <li><Link to="/login" className="nav-link">Log In</Link></li>
+                        <li><Link to="/signup" className="nav-link">Sign Up</Link></li>
+                    </ul>
+                }
+            </div>
+        </nav>
     )
 }
 
